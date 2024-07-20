@@ -14,4 +14,4 @@ This has a python web server(flask) that hosts a web based file picker and file 
 - Make a folder called "md_files"
 - Put your files inside the folder
 - Run the python file
-- In your browser open up https://127.0.0.1:5000
+- In your browser open up http://127.0.0.1:5000
