@@ -1,4 +1,3 @@
-import requests
 from flask import Flask, render_template, abort, send_from_directory
 import os
 import markdown
