@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ filename }}</title>
+</head>
+<body>
+    <h1>MD/MDX Viewer</h1>
+    <ul>
+    {% for file in files %}
+        <li><a href="{{ url_for('view_file', filename=file) }}">{{ file }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    html {
+        font-family: Poppins, sans-serif;
+        background: #131313;
+        background-size: 100%;
+        color: #fff;
+        margin: 5% 20% 10% 20%;
+    }
+
+    a {
+        color: #f77878;
+        text-decoration: underline;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        color: #f9b9b9;
+    }
+
+    #title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0 0 5rem 0;
+        padding: 0;
+    }
+</style>
+</html>
