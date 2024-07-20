@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ filename }}</title>
+</head>
+<body>
+    <span id="top"></span>
+    <a href="{{ url_for('index') }}" id="back_button" title="Back to Home">Back to index</a>
+    <a href="#top" id="back-to-top" title="Back to the Top">Top</a>
+    <div>
+        {{ content|safe }}
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    html {
+        font-family: Poppins, sans-serif;
+        background: #131313;
+        background-size: 100%;
+        color: #fff;
+    }
+
+    div {
+        margin: 5% 20% 10% 20%;
+    }
+
+    a {
+        color: #f77878;
+        text-decoration: underline;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        color: #f9b9b9;
+    }
+
+    #title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0 0 5rem 0;
+        padding: 0;
+    }
+
+    #back_button {
+        position: fixed;
+        top: 0%;
+        margin: 2% 0 0 2%;
+    }
+
+    #top {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+    }
+
+    #back-to-top {
+        position: fixed;
+        bottom: 0%;
+        margin: 0 0 2% 93%;
+    }
+
+    #back_button, #back-to-top {
+        border: #181818 solid 20px;
+        border-radius: 20px;
+        background-color: #181818;
+        transition: 0.3s;
+    }
+
+    #back_button:hover, #back-to-top:hover {
+        background-color: #232323;
+        border: #232323 solid 20px;
+    }
+
+    html, body {
+    scroll-behavior: smooth;
+    }
+</style>
+</html>

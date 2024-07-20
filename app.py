@@ -18,12 +18,11 @@ def index():
     files = os.listdir(app.config['MD_FOLDER'])
     return render_template('index.html', files=files)
 
+
 @app.route('/view/<filename>')
 def view_file(filename):
-    if not filename.endswith(('.md')):
+    if not filename.endswith(('.md', '.mdx')):
         abort(404)
-    if filename.endswith('.mdx'):
-        view_mdx_file(filename)
     else:
         content = get_file_content(filename)
         if content is None:
@@ -31,16 +30,6 @@ def view_file(filename):
         rendered_content = markdown.markdown(content)
     
     return render_template('view.html', content=rendered_content, filename=filename)
-
-@app.route('/view_mdx/<filename>')
-def view_mdx_file(filename):
-    if not filename.endswith('.mdx'):
-        abort(404)
-    else:
-        content = get_file_content(filename)
-        if content is None:
-            abort(404)
-    return render_template('mdx_view.html', content=content, filename=filename)
 
 @app.route('/md_files/<path:filename>')
 def download_file(filename):
