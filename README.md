@@ -1,4 +1,4 @@
-# A very sleek and simple .md file viewer
+# A good looking and simple md file viewer
 
 This has a python web server(flask) that hosts a web based file picker and file viewer 
 
