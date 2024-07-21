@@ -3,14 +3,17 @@
 <head>
     <meta charset="utf-8">
     <title>{{ filename }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='global.css') }}"/>
 </head>
 <body>
-    <h1>MD Viewer</h1>
-    <ul>
-    {% for file in files %}
-        <li><a href="{{ url_for('view_file', filename=file) }}">{{ file }}</a></li>
-    {% endfor %}
-    </ul>
+    <div id="content">
+        <h1>MD Viewer</h1>
+        <ul>
+        {% for file in files %}
+            <li><a href="{{ url_for('view_file', filename=file) }}">{{ file }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>

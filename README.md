@@ -13,7 +13,6 @@ The example is from [this](https://www.reddit.com/r/HobbyDrama/comments/rowk83/d
 
 - Clone it
 - Run "pip install -r requirements.txt"
-- Make a folder called "md_files"
-- Put your files inside the folder
-- Run the python file
+- Put your md files inside the "md_files" folder
+- Run the python app
 - In your browser open up http://127.0.0.1:5000
